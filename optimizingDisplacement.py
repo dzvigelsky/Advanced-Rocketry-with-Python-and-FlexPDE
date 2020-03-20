@@ -93,6 +93,7 @@ d_angle=0 # corresponding launch angle (distance)
 max_KE=0 # maximum Kinetic Energy
 KE_angle=0 # corresponding launch angle (Kinetic Energy)
 AngleRange = sp.arange(5,51,5) # for angles in increments 5 from 5 to 50
+print("Time         ", "      x-disp        ", "    KE        ", "   Angle")
 for Angle in AngleRange:
     with open(FlexFileName, "w") as f:
         print(FlexCode%Angle, file=f)
@@ -122,7 +123,8 @@ for Angle in AngleRange:
     plt.plot(xd,yd)
 
 print("")
-print("The Maximum xd was ", max_d, "at", d_angle, "and Maximum KE was ", max_KE, "at", KE_angle)
+print("The Maximum xd was ", max_d, "at", d_angle,"degrees, ", "and Maximum KE was ", max_KE, "at", KE_angle)
 plt.title('Trajectory for various launch angles')
 plt.legend(AngleRange)
 plt.show()
+
