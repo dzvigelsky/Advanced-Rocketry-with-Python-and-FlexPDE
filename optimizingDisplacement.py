@@ -6,7 +6,7 @@ import scipy as sp
 import matplotlib.pyplot as plt
 
 # FlexPDE code with changing launch angle, theta
-FlexCode = """TITLE '2CM4 Assignment 1'     { the problem identification }
+FlexCode = """TITLE 'OptimizingLaunchAngle'     { the problem identification }
 COORDINATES cartesian2  { coordinate system, 1D,2D,3D, etc }
 VARIABLES        { system variables }
     xd (threshold=0.1)
